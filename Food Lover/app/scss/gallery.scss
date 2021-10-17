@@ -1,0 +1,48 @@
+@import "main";
+.gallery{
+  margin-top: 120px;
+  &__title{
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 49px;
+    text-align: center;
+    margin-bottom: 130px;
+      &:after{
+        content: '';
+        @include line($orange)
+      }
+  }
+  &-block{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px 30px;
+  }
+  &__img{
+    margin: 0 auto;
+  }
+}
+
+
+/* Медиа Запросы */
+
+@media (max-width: 768px) {
+  .gallery__title{
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 425px){
+  .gallery{
+    margin-top: 40px;
+  }
+  .gallery__title{
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 375px){
+  .gallery__title{
+    font-size: 22px;
+  }
+}

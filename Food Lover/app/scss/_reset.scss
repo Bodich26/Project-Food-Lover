@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import "variable";
+
+/* Сброс стилей */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  background-color: $navyBlue;
+}
+
+img{
+  height: auto;
+  max-width: 100%;
+}
+p, h1, h2, h3, h4, h5, h6, a{
+  color: $white;
+}
+a{
+  text-decoration: none;
+}
+ol, ul{
+  list-style: none;
+}
+button{
+  outline: none;
+}
+
+

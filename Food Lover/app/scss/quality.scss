@@ -1,0 +1,95 @@
+@import "main";
+.quality{
+  margin-top: 120px;
+  &-block{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-info{
+    flex-basis: 50%;
+    margin-top: 280px;
+    &__title{
+      font-weight: bold;
+      font-size: 42px;
+        &:after{
+          content: '';
+          margin: 0!important;
+          @include line($orange)
+        }
+    }
+    &__text{
+      margin-top: 40px;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 36px;
+      max-width: 500px;
+    }
+  }
+  &-poster{
+    flex-basis: 50%;
+    &__img{}
+  }
+}
+
+
+/* Медиа Запросы */
+
+@media (max-width: 768px) {
+  .quality-info__title{
+    font-size: 36px;
+  }
+  .quality-info__text{
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .quality-block{
+    display: block;
+  }
+  .quality-info{
+    margin-top: 0;
+  }
+  .quality-info__title{
+    font-size: 36px;
+  }
+  .quality-info__text{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 425px){
+  .quality{
+    margin-top: 80px;
+    text-align: center;
+  }
+  .quality-info__title{
+    font-size: 25px;
+  }
+  .quality-info__title::after{
+    margin: 0 auto!important;
+  }
+  .quality-info__text{
+    line-height: 25px;
+  }
+  .quality-poster{
+    text-align: center;
+    margin-top: 60px;
+  }
+  .quality-poster__img{
+    width: 70%;
+  }
+}
+
+@media (max-width: 375px){
+  .quality-info__title{
+    font-size: 22px;
+  }
+  .quality-info__text{
+    font-size: 14px;
+  }
+}

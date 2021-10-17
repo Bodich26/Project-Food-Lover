@@ -1,0 +1,106 @@
+@import "main";
+.ourMenu{
+  margin-top: 120px;
+  &__title{
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 130px;
+    text-align: center;
+      &:after{
+        content: '';
+        @include line($orange)
+      }
+  }
+  &__img{}
+  &__caption{
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 32px;
+    color: $orange;
+    margin: 20px 0 10px;
+  }
+  &__info{
+    line-height: 30px;
+    text-align: center;
+    max-width: 310px;
+    margin: 0 36px auto;
+  }
+  &__price{
+    margin-top: 36px;
+    font-size: 20px;
+    color: $orange;
+    text-align: center;
+    span{
+
+    }
+  }
+  &-block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &-column{
+    text-align: center;
+    margin-left: 10px;
+      &:first-child{
+        margin-left: 0;
+      }
+  }
+}
+
+
+/* Медиа Запросы */
+
+@media (max-width: 1195px) {
+  .ourMenu-column{
+    margin-bottom: 35px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+  }
+}
+
+@media (max-width: 803px) {
+  .ourMenu-column {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourMenu__title{
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 425px){
+  .ourMenu{
+    margin-top: 80px;
+  }
+  .ourMenu__title{
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+  .ourMenu__caption{
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .ourMenu-column{
+    margin-left: 0;
+  }
+  .ourMenu__price{
+    margin: 20px 0 30px;
+  }
+}
+
+@media (max-width: 375px){
+  .ourMenu__title{
+    line-height: 16px;
+  }
+  .ourMenu__info{
+    margin: 0 auto;
+  }
+  .ourMenu__price{
+    font-size: 18px;
+  }
+}

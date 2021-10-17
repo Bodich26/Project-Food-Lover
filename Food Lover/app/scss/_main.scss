@@ -1,0 +1,9 @@
+@import "mixins";
+@import "variable";
+@import "reset";
+.wrap{
+  @include min-max(375px,1200px,15px);
+}
+.container{
+  @include min-max(375px, 1920px, 0)
+}

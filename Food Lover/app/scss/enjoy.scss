@@ -1,0 +1,76 @@
+@import "main";
+.enjoy{
+  background-image: url("../images/gallery-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 120px;
+  padding: 193px 0 193px;
+  width: 100%;
+  height: 100%;
+  &-block{
+    border: 9px solid $orange;
+    max-width: 726px;
+    margin: 0 auto;
+    padding: 55px 14px 120px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 67px;
+      &:after{
+        content: '';
+        @include line($orange)
+      }
+  }
+  &__text{
+    font-size: 24px;
+    line-height: 45px;
+    text-align: center;
+  }
+}
+
+
+/* Медиа Запросы */
+
+@media (max-width: 768px) {
+  .enjoy{
+    padding: 143px 0 143px;
+  }
+  .enjoy__title{
+    font-size: 36px;
+  }
+  .enjoy__text{
+    font-size: 22px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 425px){
+  .enjoy{
+    padding: 80px 0 80px;
+  }
+  .enjoy__title{
+    font-size: 25px;
+    margin-bottom: 34px;
+  }
+  .enjoy__text{
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 375px){
+  .enjoy{
+    padding: 80px 0 80px;
+  }
+  .enjoy__title{
+    font-size: 22px;
+  }
+  .enjoy__text{
+    font-size: 16px;
+    line-height: 30px;
+  }
+}

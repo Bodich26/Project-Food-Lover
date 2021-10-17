@@ -1,0 +1,16 @@
+@mixin min-max($min-width, $max-width, $padding){
+  min-width:$min-width;
+  max-width:$max-width;
+  padding:0 $padding;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin line($orange){
+  display: block;
+  width: 175px;
+  height: 2px;
+  background-color: $orange;
+  margin: 0 auto;
+  margin-top: 3px;
+}

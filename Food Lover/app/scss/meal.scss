@@ -1,0 +1,81 @@
+@import "main";
+.meal{
+  background-color: $orange;
+  margin-top: 150px;
+  &-block{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-info{
+    margin-top: 144px;
+    flex-basis: 50%;
+    margin-left: 40px;
+  }
+  &-poster{
+    flex-basis: 50%;
+    &__img{}
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 42px;
+      &:after{
+        content: '';
+        @include line($orange)
+      }
+  }
+  &__text{
+    font-size: 24px;
+    line-height: 33px;
+    max-width: 435px;
+  }
+}
+
+
+/* Медиа Запросы */
+
+@media (max-width: 768px) {
+  .meal-info{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .meal__title{
+    font-size: 36px;
+  }
+  .meal__text{
+    max-width: 100%;
+  }
+  .meal-block{
+    display: block;
+    padding-bottom: 20px;
+  }
+  .meal-poster{
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 425px){
+  .meal{
+    margin-top: 120px;
+  }
+  .meal-info{
+    text-align: center;
+  }
+  .meal__title{
+    font-size: 25px;
+  }
+  .meal__text{
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .meal-poster{
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 375px){
+  .meal__title{
+    font-size: 22px;
+  }
+}

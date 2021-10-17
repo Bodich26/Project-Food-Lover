@@ -1,0 +1,53 @@
+@import "main";
+.footer{
+  margin-top: 77px;
+  text-align: center;
+  &__logo{
+    margin-bottom: 57px;
+  }
+  &__icons{
+    margin: 57px 0 70px;
+    &-item{
+      margin-right: 57px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+        &:last-child{
+          margin-right: 0;
+        }
+    }
+  }
+  &-menu{
+    &__list{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      &-item{
+        margin-right: 50px;
+          &:last-child{
+            margin-right: 0;
+          }
+      }
+    }
+    &__link{
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 50px;
+        &:hover{
+          color: $orange;
+          border-bottom: 1px solid $orange;
+          transition: all 0.3s ease;
+        }
+    }
+  }
+}
+
+
+/* Медиа Запросы */
+
+@media (max-width: 425px){
+  .footer__logo{
+    margin-bottom: 40px;
+    width: 280px;
+  }
+}
